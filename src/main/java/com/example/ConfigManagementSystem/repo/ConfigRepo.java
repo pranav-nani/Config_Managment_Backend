@@ -67,4 +67,9 @@ public class ConfigRepo {
     public ServiceConfig fetchConfigById(String configId) {
         return mongoOperations.findById(configId, ServiceConfig.class, "service_configs");
     }
+
+    public void deleteConfig(String configId) {
+        Query query = new Query(Criteria.where("id").is(configId));
+        mongoOperations.remove(query, ServiceConfig.class, "service_configs");
+    }
 }

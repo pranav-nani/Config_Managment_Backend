@@ -80,4 +80,13 @@ public class ConfigurationController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+    @DeleteMapping("{configId}")
+    public ResponseEntity<String> deleteConfig(@PathVariable String configId) {
+        try {
+            configService.deleteConfig(configId);
+            return ResponseEntity.ok("Configuration deleted successfully");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 }

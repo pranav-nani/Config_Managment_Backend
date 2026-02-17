@@ -30,4 +30,8 @@ public class ConfigServiceImpl {
     public ServiceConfig fetchConfigById(String configId) {
         return configRepo.fetchConfigById(configId);
     }
+
+    public void deleteConfig(String configId) {
+        configRepo.deleteConfig(configId);
+    }
 }
