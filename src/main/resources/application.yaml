@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://theproductivekid:root@pranav.k8xi6ba.mongodb.net/ConfigManagementSystem
